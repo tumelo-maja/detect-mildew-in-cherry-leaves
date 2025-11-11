@@ -1,0 +1,54 @@
+import streamlit as st
+from PIL import Image
+import numpy as np
+import pandas as pd
+
+from src.data_management import download_dataframe_as_csv
+from src.machine_learning.predictive_analysis import (
+                                                    load_model_and_predict,
+                                                    resize_input_image,
+                                                    plot_predictions_probabilities
+                                                    )
+
+def page_powdery_mildew_detector_body():
+    st.write("## Powdery Mildew Detector")
+    st.info(f"Detection tool allows one more images of leaves to be uploaded to detect if the leaf in the image has powdery mildew or not.\n\n"
+            "Upload one or more leaf images to check whether they are healthy or infected.")
+    
+    uploaded_images = st.file_uploader("Upload leaf images", type=["jpg", "jpeg", "png"], accept_multiple_files=True)
+
+    if uploaded_images is not None:
+            df_report = pd.DataFrame(columns=["Name", "Result"])
+            version = 'v1'  # model version or folder where weights are stored
+
+            for image in uploaded_images:
+                img_pil = Image.open(image)
+                st.info(f"Cherry leaf sample: **{image.name}**")
+                img_array = np.array(img_pil)
+                st.image(
+                    img_pil, 
+                    caption=f"Image Size: {img_array.shape[1]}px width x {img_array.shape[0]}px height"
+                )
+
+                # Resize for model input
+                resized_img = resize_input_image(img=img_pil, version=version)
+
+                # Load model and predict
+                pred_proba, pred_class = load_model_and_predict(resized_img, version=version)
+
+                # Show probability plot
+                plot_predictions_probabilities(pred_proba, pred_class)
+
+                # Add results to report
+                df_report = df_report.append(
+                    {"Name": image.name, "Result": pred_class},
+                    ignore_index=True
+                )
+
+            # Show report table and provide CSV download
+            if not df_report.empty:
+                st.success("Analysis Report")
+                st.table(df_report)
+                st.markdown(download_dataframe_as_csv(df_report), unsafe_allow_html=True)
+
+
