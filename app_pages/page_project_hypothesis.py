@@ -11,9 +11,6 @@ def page_project_hypothesis_body():
         "Infected leaves typically develop a light-green circular lesion, followed by a white, powder-like growth. "
         "Healthy leaves do not show these patterns."
     )
-    st.write(
-        "The **Leaf Visualiser** page allows you to compare leaf images and see average image patterns derived from the dataset."
-    )
     st.write("---")
 
     st.write("### Hypothesis 2")
@@ -23,5 +20,5 @@ def page_project_hypothesis_body():
         "During training, the model improved its ability to differentiate healthy and infected leaves."
     )
     st.write(
-        "See the **ML Performance Diagnostics** page to review loss, accuracy, confusion matrix and ROC curve."
+        "See the **ML Performance** page to review loss, accuracy, confusion matrix and ROC curve."
     )   
