@@ -9,7 +9,7 @@ def page_summary_body():
     st.info(
         "**General Information**\n\n"
         "Powdery mildew is a fungal disease that commonly affects cherry leaves."
-        "It usually begins as small pale spots that slowly spread across the leaf surface."
+        " It usually begins as small pale spots that slowly spread across the leaf surface."
         " As the infection grows, the leaf develops a white, powder-like coating."
         " Powdery mildew often spreads quickly across young leaves and new growth, making it harder for the plant to stay healthy.\n\n"
 
