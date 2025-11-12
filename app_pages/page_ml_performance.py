@@ -9,7 +9,7 @@ def page_ml_performance_diagnostics():
             " model performance and evaluation with unseen data.")
     version = "v1"
 
-    st.write("### Dataset Split Overview")
+    st.write("### Train, Validation and Test Set: Labels Frequencies")
     dist_img = plt.imread(f"outputs/{version}/bar_freq_label_distribution.png")
     st.image(dist_img, caption="Images per dataset split (Train / Validation / Test)")
 
