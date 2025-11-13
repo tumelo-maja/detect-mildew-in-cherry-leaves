@@ -32,11 +32,12 @@ from app_pages.page_ml_performance import page_ml_performance_diagnostics
 
 app = MultiPage(app_name="Powdery Mildew Detector")  # Create an instance of the app
 
+version="v3"
 # Add your app pages here using .add_page()
-app.add_page("Project Summary", page_summary_body)
-app.add_page("Project Hypothesis", page_project_hypothesis_body)
-app.add_page("Leaf Visualiser", page_leaf_visualiser_body)
-app.add_page("Mildew detector", page_powdery_mildew_detector_body)
-app.add_page("ML Performance", page_ml_performance_diagnostics)
+app.add_page("Project Summary", page_summary_body,version)
+app.add_page("Project Hypothesis", page_project_hypothesis_body,version)
+app.add_page("Leaf Visualizer", page_leaf_visualiser_body,version)
+app.add_page("Mildew detector", page_powdery_mildew_detector_body,version)
+app.add_page("ML Performance", page_ml_performance_diagnostics,version)
 
 app.run()  # Run the app
