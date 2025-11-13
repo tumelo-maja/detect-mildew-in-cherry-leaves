@@ -18,7 +18,7 @@ def page_leaf_visualiser_body():
         "These are the visual differences the model is trained to identify.\n\n"
         )
     
-    version = "v1"
+    version = "v2"
 
     if st.checkbox("Show average and variability images"):
         avg_infected = plt.imread(f"outputs/{version}/average_variability_powdery_mildew.png")

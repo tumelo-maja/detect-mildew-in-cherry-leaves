@@ -19,7 +19,7 @@ def page_powdery_mildew_detector_body():
 
     if uploaded_images is not None:
             df_report = pd.DataFrame(columns=["Name", "Result"])
-            version = 'v1'  # model version or folder where weights are stored
+            version = 'v2'
 
             for image in uploaded_images:
                 img_pil = Image.open(image)

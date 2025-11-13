@@ -7,7 +7,7 @@ def page_ml_performance_diagnostics():
     st.write("## Machine Learning Diagnostics")
     st.info(f"This page presents dataset distribution, machine learning setup,"
             " model performance and evaluation with unseen data.")
-    version = "v1"
+    version = "v2"
 
     st.write("### Train, Validation and Test Set: Labels Frequencies")
     dist_img = plt.imread(f"outputs/{version}/bar_freq_label_distribution.png")
