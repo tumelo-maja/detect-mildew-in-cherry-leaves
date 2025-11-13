@@ -9,7 +9,7 @@ from matplotlib.image import imread
 import itertools
 import random
 
-def page_leaf_visualiser_body():
+def page_leaf_visualiser_body(version="v1"):
     st.write("## Leaf Visualiser")
     st.info(
        "The main goal is to visually differentiate leaves affected by powdery mildew from healthy ones.\n\n"
@@ -18,8 +18,6 @@ def page_leaf_visualiser_body():
         "These are the visual differences the model is trained to identify.\n\n"
         )
     
-    version = "v2"
-
     if st.checkbox("Show average and variability images"):
         avg_infected = plt.imread(f"outputs/{version}/average_variability_powdery_mildew.png")
         avg_healthy = plt.imread(f"outputs/{version}/average_variability_healthy.png")

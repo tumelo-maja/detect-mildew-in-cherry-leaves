@@ -10,7 +10,7 @@ from src.machine_learning.predictive_analysis import (
                                                     plot_predictions_probabilities
                                                     )
 
-def page_powdery_mildew_detector_body():
+def page_powdery_mildew_detector_body(version="v1"):
     st.write("## Powdery Mildew Detector")
     st.info(f"Detection tool allows one more images of leaves to be uploaded to detect if the leaf in the image has powdery mildew or not.\n\n"
             "Upload one or more leaf images to check whether they are healthy or infected.")
@@ -19,7 +19,6 @@ def page_powdery_mildew_detector_body():
 
     if uploaded_images is not None:
             df_report = pd.DataFrame(columns=["Name", "Result"])
-            version = 'v2'
 
             for image in uploaded_images:
                 img_pil = Image.open(image)

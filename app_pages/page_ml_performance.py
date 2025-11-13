@@ -3,11 +3,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.image import imread
 
-def page_ml_performance_diagnostics():
+def page_ml_performance_diagnostics(version="v1"):
     st.write("## Machine Learning Diagnostics")
     st.info(f"This page presents dataset distribution, machine learning setup,"
             " model performance and evaluation with unseen data.")
-    version = "v2"
 
     st.write("### Train, Validation and Test Set: Labels Frequencies")
     dist_img = plt.imread(f"outputs/{version}/bar_freq_label_distribution.png")

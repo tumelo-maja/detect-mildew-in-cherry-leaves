@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
-def page_project_hypothesis_body():
+def page_project_hypothesis_body(version="v1"):
     st.write("## Project Hypotheses")
     st.write(f"Details of the project's hypothesis and validations are presented below.")
     
