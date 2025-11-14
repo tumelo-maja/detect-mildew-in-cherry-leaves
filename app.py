@@ -32,7 +32,7 @@ from app_pages.page_ml_performance import page_ml_performance_diagnostics
 
 app = MultiPage(app_name="Powdery Mildew Detector")  # Create an instance of the app
 
-version="v3"
+version="v2"
 # Add your app pages here using .add_page()
 app.add_page("Project Summary", page_summary_body,version)
 app.add_page("Project Hypothesis", page_project_hypothesis_body,version)
