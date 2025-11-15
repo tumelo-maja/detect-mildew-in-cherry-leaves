@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-from matplotlib.image import imread
+from src.machine_learning.evaluate_clf import load_test_evaluation
 
 def page_ml_performance_diagnostics(version="v1"):
     st.write("## Machine Learning Diagnostics")
@@ -57,15 +57,10 @@ def page_ml_performance_diagnostics(version="v1"):
     st.write("---")
 
     st.write("### Final Model Evaluation on Test Set")
-    # results = pd.DataFrame(load_test_evaluation(version), index=["Loss", "Accuracy"])
-    # st.dataframe(results.style.format("{:.4f}"))
+    results = pd.DataFrame(load_test_evaluation(version), index=["Loss", "Accuracy"])
+    results.columns = ["Value"]
+    st.dataframe(results.style.format("{:.4f}"))
 
     st.write(
         "These results show how the model performs on completely new images that were not part of training."
-    )
-
-    st.write("---")
-    st.write(
-        "For additional background and training details, see the "
-        "[Project README](https://github.com/cla-cif/Detection-Cherry-Powdery-Mildew#readme)."
     )
