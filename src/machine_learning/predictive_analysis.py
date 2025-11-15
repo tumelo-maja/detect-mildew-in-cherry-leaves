@@ -37,6 +37,7 @@ def resize_input_image(img, version):
     """
     Reshape image to average image size
     """
+    img = img.convert("RGB")
     image_shape = load_pkl_file(file_path=f"outputs/{version}/image_shape.pkl")
     img_resized = img.resize((image_shape[1], image_shape[0]), Image.LANCZOS)
     my_image = np.expand_dims(img_resized, axis=0)/255
@@ -57,11 +58,12 @@ def load_model_and_predict(my_image, version):
 
     pred_class = target_map[pred_proba < 0.5]
 
-    if pred_class == target_map[0]:
+    if pred_class == target_map[1]:
         pred_proba = 1 - pred_proba
 
     st.write(
         f"The predictive analysis indicates the sample leaf is "
         f"**{pred_class.lower()}**")
+    st.write(f"Probability: {round(pred_proba*100,1)}%")
 
     return pred_proba, pred_class
