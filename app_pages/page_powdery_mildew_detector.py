@@ -22,7 +22,7 @@ def page_powdery_mildew_detector_body(version="v1"):
 
             for image in uploaded_images:
                 img_pil = Image.open(image)
-                st.info(f"Cherry leaf sample: **{image.name}**")
+                st.info(f"Leaf sample: **{image.name}**")
                 img_array = np.array(img_pil)
                 st.image(
                     img_pil, 
@@ -39,8 +39,8 @@ def page_powdery_mildew_detector_body(version="v1"):
                 plot_predictions_probabilities(pred_proba, pred_class)
 
                 # Add results to report
-                df_report = df_report.append(
-                    {"Name": image.name, "Result": pred_class},
+                df_report = pd.concat(
+                    [df_report, pd.DataFrame({"Name": [image.name], "Result": [pred_class]})],
                     ignore_index=True
                 )
 
