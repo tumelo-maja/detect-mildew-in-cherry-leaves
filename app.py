@@ -30,14 +30,14 @@ from app_pages.page_powdery_mildew_detector import page_powdery_mildew_detector_
 from app_pages.page_project_hypothesis import page_project_hypothesis_body
 from app_pages.page_ml_performance import page_ml_performance_diagnostics
 
-app = MultiPage(app_name="Powdery Mildew Detector")  # Create an instance of the app
+app = MultiPage(app_name="Powdery Mildew Detector")
 
 version="v2"
-# Add your app pages here using .add_page()
+
 app.add_page("Project Summary", page_summary_body,version)
 app.add_page("Project Hypothesis", page_project_hypothesis_body,version)
 app.add_page("Leaf Visualizer", page_leaf_visualiser_body,version)
-app.add_page("Mildew detector", page_powdery_mildew_detector_body,version)
+app.add_page("Mildew Detector", page_powdery_mildew_detector_body,version)
 app.add_page("ML Performance", page_ml_performance_diagnostics,version)
 
-app.run()  # Run the app
+app.run()
