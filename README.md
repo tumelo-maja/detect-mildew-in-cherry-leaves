@@ -132,7 +132,7 @@ The Streamlit dashboard is organized into the following pages:
 <details>
 <summary>Project Summary</summary>
 
-![Dashboard and Menu Image](./docs/readme_images/dashboard-summary.png)
+![Project Summary](./docs/readme_images/screenshots/screenshot-project-summary.png)
 </details>
 
 - General Information
@@ -151,7 +151,7 @@ The Streamlit dashboard is organized into the following pages:
 <details>
 <summary>Leaf Visualizer</summary>
 
-![Dashboard and Menu Image](./docs/readme_images/dashboard-summary.png)
+![Leaf Visualizer](./docs/readme_images/screenshots/screenshot-leaf-visualizer.png)
 </details>
 
 - Answers Business Requirement 1: Primarily images
@@ -164,7 +164,7 @@ The Streamlit dashboard is organized into the following pages:
 <details>
 <summary>Mildew Detector</summary>
 
-![Dashboard and Menu Image](./docs/readme_images/dashboard-summary.png)
+![Mildew Detector](./docs/readme_images/screenshots/screenshot-mildew-detector.png)
 </details>
 
 - Answers Business Requirement 2: Presents an interative tool to predict if a given leaf image is healthy or infected with powdery mildew.
@@ -179,7 +179,7 @@ The Streamlit dashboard is organized into the following pages:
 <details>
 <summary>Project Hypotheses and Validation</summary>
 
-![Dashboard and Menu Image](./docs/readme_images/dashboard-summary.png)
+![Project Hypotheses](./docs/readme_images/screenshots/screenshot-project-hypothesis.png)
 </details>
 
 - Hypothesis 1: There are clear visual markers or characteristics that distinguish healthy cherry leaves from those infected with powdery mildew.
@@ -190,7 +190,7 @@ The Streamlit dashboard is organized into the following pages:
 <details>
 <summary>ML Performance Metrics</summary>
 
-![Dashboard and Menu Image](./docs/readme_images/dashboard-summary.png)
+![ML Performance](./docs/readme_images/screenshots/screenshot-ml-performance.png)
 </details>
 
 - Label Distribution Overview
