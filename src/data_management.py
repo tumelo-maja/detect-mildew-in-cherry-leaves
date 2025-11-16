@@ -9,8 +9,9 @@ def download_dataframe_as_csv(df):
     csv = df.to_csv().encode()
     b64 = base64.b64encode(csv).decode()
     href = (
-        f'<a href="data:file/csv;base64,{b64}" download="Mildew Report {datetime_now}.csv" '
-        f'target="_blank">Download Report</a>'
+        f'<a href="data:file/csv;base64,{b64}" '
+        f'download="Mildew Report {datetime_now}.csv" '
+        'target="_blank">Download Report (.csv)</a>'
     )
     return href
 
