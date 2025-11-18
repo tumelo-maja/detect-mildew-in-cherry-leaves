@@ -16,7 +16,7 @@ def page_project_hypothesis_body(version="v1"):
         "Infected leaves typically develop a light-green circular lesion, "
         "followed by a white, powder-like growth. "
         "Healthy leaves do not show these patterns.\n\n"
-        "**Validation:**\n"
+        "**Validation:**\n\n"
         "Generate and inspect average and variability images for healthy and infected leaves."
     )
     st.write("---")
@@ -31,12 +31,11 @@ def page_project_hypothesis_body(version="v1"):
         "During training, the model improved its ability "
         "to differentiate healthy and infected leaves.\n\n"
         "**Validation:**\n"
-        "- Apply image augmentation to create additional variations of the leaf images and improve the model's generalization of powdery mildew patterns/markers."
-        "- Train a classification CNN model"
-        "- Evaluate model performance against the project's success metrics"
-        "- If the model underperforms, re-train by adjusting CNN layer structure or configuration."
+        "- Apply image augmentation to create additional variations of the leaf images and improve the model's generalization of powdery mildew patterns/markers.\n"
+        "- Train a classification CNN model\n"
+        "- Evaluate model performance against the project's success metrics\n"
+        "- If the model underperforms, re-train by adjusting CNN layer structure or configuration.\n"
         "- Test the model on unseen images."
-
     )
     st.write(
         "See the **ML Performance** page to "
