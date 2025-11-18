@@ -73,17 +73,18 @@ This section outlines the main assumptions that guided the development of the pr
 
 There are clear visual markers/characteristic in leaves that differentiate healthy leaves from those infected by powdery mildew fungus.
 
-**Approach:** Generate and inspect average and variability images for healthy and infected leaves.
+**Validation:** Generate and inspect average and variability images for healthy and infected leaves.
 
 ### **Hypothesis 2**
 
-A Convolutional Neural Network (CNN) model can be trained to recognize distinctive visual features to accurately classify leaves as healthy or infected.
+A Convolution Neural Network (CNN) model can be trained to recognize distinctive visual features to accurately classify leaves as healthy or infected.
 
-**Approach:**
+**Validation:**
 
-- **Image augmentation techniques:** to create additional variations of the leaf image to improve the model's learning of general visual patterns.
+- Apply image augmentation to create additional variations of the leaf images and improve the model's generalization of powdery mildew patterns/markers.
 - Train a classification CNN model
 - Evaluate model performance against the project's success metrics
+- If the model underperforms, re-train by adjusting CNN layer structure or configuration.
 - Test the model on unseen images.
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
