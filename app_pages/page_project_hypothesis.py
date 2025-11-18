@@ -17,7 +17,7 @@ def page_project_hypothesis_body(version="v1"):
         "followed by a white, powder-like growth. "
         "Healthy leaves do not show these patterns.\n\n"
         "**Validation:**\n\n"
-        "Generate and inspect average and variability images for healthy and infected leaves."
+        "- Generate and inspect average and variability images for healthy and infected leaves."
     )
     st.write("---")
 
