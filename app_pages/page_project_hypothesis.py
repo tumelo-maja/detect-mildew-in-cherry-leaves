@@ -37,6 +37,23 @@ def page_project_hypothesis_body(version="v1"):
         "- If the model underperforms, re-train by adjusting CNN layer structure or configuration.\n"
         "- Test the model on unseen images."
     )
+
+    st.write("### Hypothesis 3")
+    st.success(
+        "* Image background or other objects in the image does not "
+        "have any effect on the model's performance.")
+    st.info(
+        "The model was trained using images with a controlled background and "
+        "each image contained only 1 leaf. "
+        "In a practical application of this ML solutions, images may "
+        "have more than 1 leaves as the picture would be taken "
+        "while all leaves are attached to the plant. "
+        "When tested with a multi-leaf image, "
+        "the mode's predictions performed poorly.\n\n"
+        "**Validation:**\n"
+        "- Use an image with other objects, lightings "
+        "and or multiple leave to test if an accurate prediction is given."
+    )    
     st.write(
         "See the **ML Performance** page to "
         "review loss, accuracy, confusion matrix and ROC curve."

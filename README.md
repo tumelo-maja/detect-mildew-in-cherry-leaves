@@ -18,6 +18,7 @@
   - [Hypotheses and validations](#hypotheses-and-validations)
     - [**Hypothesis 1**](#hypothesis-1)
     - [**Hypothesis 2**](#hypothesis-2)
+    - [**Hypothesis 3**](#hypothesis-3)
   - [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
     - [**Business Requirement 1: Visual Understanding of Leaf Conditions**](#business-requirement-1-visual-understanding-of-leaf-conditions)
     - [**Business Requirement 2: Classification and Prediction**](#business-requirement-2-classification-and-prediction)
@@ -86,6 +87,12 @@ A Convolution Neural Network (CNN) model can be trained to recognize distinctive
 - Evaluate model performance against the project's success metrics
 - If the model underperforms, re-train by adjusting CNN layer structure or configuration.
 - Test the model on unseen images.
+
+### **Hypothesis 3**
+
+Image background or other objects in the image does not have any effect on the model's performance.
+
+**Validation:** Use an image with other objects, lightings and or multiple leave to test if an accurate prediction is given.
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
@@ -247,6 +254,14 @@ The Streamlit dashboard is organized into the following pages:
   | Feature | Action | Expected Result | Actual Result |
   | ------- |------- | --------------- | --------------- |
   | Download Report Link | Click 'Download Report' link | A csv file containing current prediction results is downloaded automatically | results as expected |  
+
+  - As a client, I can upload images with multiple leaves so that I can get prediction for leaves still attached to the plant.
+
+  - **Feature Test**
+
+  | Feature | Action | Expected Result | Actual Result |
+  | ------- |------- | --------------- | --------------- |
+  | Upload images with multiple leaves | Upload images | Accurate prediction is derived | occasionally the model's performance is poor. The model requires further training with images with varying backgrounds and lighting effects - not covered in this version release |
 
 ## Code validation
 
