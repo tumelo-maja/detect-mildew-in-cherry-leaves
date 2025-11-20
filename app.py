@@ -18,7 +18,7 @@ st.html(
     """
     <div class='head-wrap'>
         <h1 class='head-title'>🍃 Powdery Mildew Detector</h1>
-        <p class='head-title'>A visual diagnosis and ML prediction dashboard for cherry leaf disease</p>
+        <p class='head-title'>Machine Learning prediction dashboard for powdery mildew fungal disease</p>
     </div>
     """
 )
