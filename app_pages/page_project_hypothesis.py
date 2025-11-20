@@ -45,8 +45,8 @@ def page_project_hypothesis_body(version="v1"):
     st.info(
         "The model was trained using images with a controlled background and "
         "each image contained only 1 leaf. "
-        "In a practical application of this ML solutions, images may "
-        "have more than 1 leaves as the picture would be taken "
+        "In a practical application of this ML solution, images may "
+        "contain more than 1 leaf since the picture will likely be taken "
         "while all leaves are attached to the plant. "
         "When tested with a multi-leaf image, "
         "the mode's predictions performed poorly.\n\n"
